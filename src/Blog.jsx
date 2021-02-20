@@ -1,5 +1,7 @@
 import React from 'react';
-import Article from './Article'
+import Article from './Article';
+import * as FooBar from './components/Foobar';
+import Hoge from './components/Hoge';
 
 class Blog extends React.Component {
   constructor(props) {
@@ -21,7 +23,7 @@ class Blog extends React.Component {
     }
   }
 
-  componentWillMount() {
+  componentWillUnmount() {
     document.getElementById('counter').removeEventListener('click', this.countUp)
   }
 
@@ -46,6 +48,9 @@ class Blog extends React.Component {
           toggle={() => this.togglePublished()}
           count={this.state.count}
         />
+        <FooBar.Foo />
+        <FooBar.Bar />
+        <Hoge />
       </React.Fragment>
     )
   }
