@@ -28,8 +28,7 @@ const Blog = () => {
   return (
     <React.Fragment>
       <Article 
-        title={"Reactの使い方"} 
-        // count={this.state.count}
+        title={"Reactの使い方"}
       />
       <FooBar.Foo />
       <FooBar.Bar />
